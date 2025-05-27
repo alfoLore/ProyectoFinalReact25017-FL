@@ -6,7 +6,7 @@ import NotFound from '../NotFound/NotFound.jsx'
 import SignIn from '../SignIn/SignIn.jsx'
 import MyOrder from '../MyOrder/MyOrder.jsx'
 import './App.css'
-import NavBar from '../../components/NavBAr/NavBar.jsx' 
+import NavBar from '../../components/NavBar/NavBar.jsx'
 
 const AppRoutes = () =>{
   let routes = useRoutes([
