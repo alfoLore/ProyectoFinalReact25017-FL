@@ -1,11 +1,8 @@
-
+import Layout from "../../components/Layout/Layout.jsx"
 function MyOrder() {
-
   return (
-    <h1 className="text-3xl font-bold underline bg-red-500">
-      MyOrder!
-    </h1>
+    <Layout>MyOrder</Layout>
   )
 }
 
-export default  MyOrder
+export default MyOrder

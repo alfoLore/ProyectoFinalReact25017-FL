@@ -1,11 +1,9 @@
 
+import Layout from "../../components/Layout/Layout.jsx"
 function SignIn() {
-
   return (
-    <h1 className="text-3xl font-bold underline bg-red-500">
-      SignIn!
-    </h1>
+    <Layout>SignIn</Layout>
   )
 }
 
-export default  SignIn
+export default SignIn

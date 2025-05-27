@@ -1,11 +1,8 @@
-
+import Layout from "../../components/Layout/Layout.jsx"
 function NotFound() {
-
   return (
-    <h1 className="text-3xl font-bold underline bg-red-500">
-      NotFound!
-    </h1>
+    <Layout>NotFound</Layout>
   )
 }
 
-export default  NotFound
+export default NotFound

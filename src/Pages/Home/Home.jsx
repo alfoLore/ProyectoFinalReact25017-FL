@@ -1,9 +1,7 @@
-
+import Layout from "../../components/Layout/Layout.jsx"
 function Home() {
   return (
-    <h1 className="text-3xl font-bold underline bg-red-500">
-      Home!
-    </h1>
+    <Layout>Home</Layout>
   )
 }
 

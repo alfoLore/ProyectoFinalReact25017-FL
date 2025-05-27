@@ -86,8 +86,10 @@ const NavBar = () => {
                         </NavLink>
                 </li>
                 
-                <li>
-                <NavLink to="/carrito"> 0</NavLink>
+                <li className="navbar_middle_right">
+                   
+                <button className="btn capitalize"> <shopping-cart/> cart 
+                0</button>
                 </li>
             </ul>
             
