@@ -1,7 +1,12 @@
 import Layout from "../../components/Layout/Layout.jsx"
+import Card from "../../components/Card/Card.jsx"
+
 function Home() {
   return (
-    <Layout>Home</Layout>
+    <Layout>
+      Home
+      <Card />
+    </Layout>
   )
 }
 
