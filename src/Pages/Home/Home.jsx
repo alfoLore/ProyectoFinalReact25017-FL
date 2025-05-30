@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Layout from "../../components/Layout/Layout.jsx"
 import Card from "../../components/Card/Card.jsx"
-
+import ProductDetail from "../../components/ProductDetail/ProductDetail.jsx";
 
 function Home() {
   //const [items, setItems] = useState([]);
@@ -32,6 +32,7 @@ function Home() {
           ))}
         </div>
       )}
+      <ProductDetail />
     </Layout>
   )
 }
