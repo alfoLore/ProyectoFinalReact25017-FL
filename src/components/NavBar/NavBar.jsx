@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom"
+import { useContext } from "react";
+import { ShoppingCartContext } from "../../Context/index.jsx";
+import { FaShoppingCart } from 'react-icons/fa';
+
 
 const NavBar = () => {
-
+const context = useContext(ShoppingCartContext)
      return(    
         <nav className="flex justify-between items-center fixed top-0 z-20 w-full py-6 px-10 bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200">
             <ul className="flex items-center gap-6 text-gray-700 font-medium">
@@ -87,9 +91,9 @@ const NavBar = () => {
                 </li>
                 
                 <li className="navbar_middle_right">
-                   
-                <button className="btn capitalize"> <shopping-cart/> cart 
-                0</button>
+                 <button className="btn capitalize flex items-center gap-2">
+                     <FaShoppingCart /> Cart ({context.count})
+                 </button>
                 </li>
             </ul>
             
