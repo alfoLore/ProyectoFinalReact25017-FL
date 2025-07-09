@@ -9,7 +9,7 @@ import MyOrder from '../MyOrder/MyOrder.jsx'
 import './App.css'
 import NavBar from '../../components/NavBar/NavBar.jsx'
 
-const AppRoutes = () =>{
+function AppRoutes() {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
     { path: '/my-account', element: <MyAccount /> },
@@ -17,7 +17,7 @@ const AppRoutes = () =>{
     { path: '/my-orders', element: <MyOrders /> },
     { path: '/not-found', element: <NotFound /> },
     { path: '/sign-in', element: <SignIn /> },
-  ]);
+  ])
   return routes
 }
 
