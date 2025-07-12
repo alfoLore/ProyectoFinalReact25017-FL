@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom"
 import { useContext } from "react";
 import { ShoppingCartContext } from "../../Context/index.jsx";
-import { FaShoppingCart } from 'react-icons/fa';
+
+import { ShoppingBagIcon } from "lucide-react";
+
 
 
 const NavBar = () => {
@@ -90,9 +92,10 @@ const context = useContext(ShoppingCartContext)
                         </NavLink>
                 </li>
                 
-                <li className="navbar_middle_right">
+                <li className="flex items-center">
                  <button className="btn capitalize flex items-center gap-2">
-                     <FaShoppingCart /> Cart ({context.count})
+                    <ShoppingBagIcon className='size-6 text-black' />
+                        <div>{context.count}</div> 
                  </button>
                 </li>
             </ul>

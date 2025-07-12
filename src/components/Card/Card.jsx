@@ -1,14 +1,29 @@
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { ShoppingCartContext } from "../../Context/index.jsx";
+import ProductDetail from "../ProductDetail/ProductDetail.jsx";
 
 
 const Card = ({ data }) => {
 
   const context = useContext(ShoppingCartContext)
+
+  const showProduct =(productDetail)=> {
+    context.openProductDetail()
+    context.setProductToShow(productDetail)
+  }
   
+
+  const addProductsToCart =(productData)=> {
+    context.setCount(context.count + 1)
+    context.setCartProducts([...context.setCartProducts, productData])
+    
+  }
+
   return (
-    <div className="bg-white border border-[#d8f5ee] rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+    <div 
+    className="bg-white border border-[#d8f5ee] rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+    onClick={() => showProduct(data)}>
       <figure className="relative aspect-[4/3] overflow-hidden rounded-t-2xl">
         <img
           src={data.image}
@@ -24,9 +39,13 @@ const Card = ({ data }) => {
         <div className="flex items-center justify-between">
           <span className="text-lg font-bold text-[#3a6d66]">${data.price}</span>
           <button className="bg-[#a0eacf] text-gray-800 text-sm font-medium px-4 py-1.5 rounded-xl hover:bg-[#8ed7bb] transition"
-          onClick ={() => context.setCount(context.count + 1)}
+          onClick ={(e) => {
+             e.stopPropagation()
+             context.setCount(context.count + 1)
+             addProductsToCart(data)
+          }}
           >
-            Agregar
+            Agregar 
           </button>
         </div>
       </div>
