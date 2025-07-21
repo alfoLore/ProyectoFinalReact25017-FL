@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import { ShoppingCartContext } from "../../Context/index.jsx";
-import './ProductDetail.css'
+
+import '../../styles/styles.css'
 
 const ProductDetail = () => {
     const context = useContext(ShoppingCartContext)

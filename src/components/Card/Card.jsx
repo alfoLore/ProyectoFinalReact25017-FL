@@ -14,9 +14,13 @@ const Card = ({ data }) => {
   }
   
 
-  const addProductsToCart =(productData)=> {
+  const addProductsToCart =(event, productData)=> {
+    event.stopPropagation()
     context.setCount(context.count + 1)
-    context.setCartProducts([...context.setCartProducts, productData])
+    context.setCartProducts([...(context.cartProducts || []), productData])
+    context.openCheckoutSideMenu()
+    context.closeProductDetail()
+    //console.log('cart:', context.cartProducts);
     
   }
 
@@ -39,11 +43,9 @@ const Card = ({ data }) => {
         <div className="flex items-center justify-between">
           <span className="text-lg font-bold text-[#3a6d66]">${data.price}</span>
           <button className="bg-[#a0eacf] text-gray-800 text-sm font-medium px-4 py-1.5 rounded-xl hover:bg-[#8ed7bb] transition"
-          onClick ={(e) => {
-             e.stopPropagation()
-             context.setCount(context.count + 1)
-             addProductsToCart(data)
-          }}
+          onClick ={(event) => 
+            addProductsToCart(event, data)
+          }
           >
             Agregar 
           </button>

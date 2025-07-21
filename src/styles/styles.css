@@ -1,0 +1,13 @@
+.checkout-side-menu {
+    width: 360px;
+    height: calc(100vh - 78px);
+    top: 78px;
+   
+}
+
+.product-detail {
+    width: 360px;
+    height: calc(100vh - 78px);
+    top: 78px;
+   
+}
