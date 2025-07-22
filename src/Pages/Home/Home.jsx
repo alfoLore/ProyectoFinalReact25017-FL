@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import Layout from "../../components/Layout/Layout.jsx"
 import Card from "../../components/Card/Card.jsx"
 import ProductDetail from "../../components/ProductDetail/ProductDetail.jsx";
+import Carousel from "../../components/Carousel/Carousel.jsx";
+
 
 function Home() {
   //const [items, setItems] = useState([]);
@@ -22,6 +24,7 @@ function Home() {
     }, [])
     return (
     <Layout>
+      <Carousel />
       <h2 className="text-2xl font-bold mb-4">Productos</h2>
       {loading ? (
         <p>Cargando productos...</p>
